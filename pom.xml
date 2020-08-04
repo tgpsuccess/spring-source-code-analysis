@@ -11,6 +11,8 @@
     <modules>
         <module>spring-tx</module>
         <module>spring-circular</module>
+        <module>servlet_001</module>
+        <module>springmvc001</module>
     </modules>
 
 
