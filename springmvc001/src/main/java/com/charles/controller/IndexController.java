@@ -1,6 +1,8 @@
 package com.charles.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,11 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @discription
  * @date 2020/8/4 8:11 下午
  */
-@RestController
+//@RestController
+@Controller
 public class IndexController {
 
+    @ResponseBody
     @RequestMapping("/")
     public String index(){
         return "test mvc";
+    }
+
+    @RequestMapping("/pageIndex")
+    public String pageIndex(){
+        return "pageIndex";
     }
 }
