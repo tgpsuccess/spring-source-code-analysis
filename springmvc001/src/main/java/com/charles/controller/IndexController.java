@@ -23,6 +23,7 @@ public class IndexController {
 
     @RequestMapping("/pageIndex")
     public String pageIndex(){
+        System.out.println(">>>pageIndex<<<");
         return "pageIndex";
     }
 }
