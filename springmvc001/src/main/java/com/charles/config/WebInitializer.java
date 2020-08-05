@@ -29,6 +29,6 @@ public class WebInitializer implements WebApplicationInitializer {
         // 4. 填写url路径映射
         dynamic.addMapping("/");
         dynamic.setLoadOnStartup(1); // 优先级最高
-
+        dynamic.setAsyncSupported(true); // 开启SpringMVC异步
     }
 }

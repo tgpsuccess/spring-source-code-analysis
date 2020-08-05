@@ -4,6 +4,7 @@ import com.charles.interceptor.TokenInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -16,8 +17,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * @date 2020/8/4 8:13 下午
  */
 @Configuration
-@ComponentScan("com.charles.controller")
+@ComponentScan(basePackages = {"com.charles.controller","com.charles.service"})
 @EnableWebMvc // 开启SpringMVC注解方式
+@EnableAsync
 public class SpringMvcConfig implements WebMvcConfigurer {
 
     @Bean
